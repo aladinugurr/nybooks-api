@@ -1,0 +1,17 @@
+.nav{
+    display: flex;
+    background: #111;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+
+}
+.nav__img{
+    width: 60px;
+    cursor: pointer;
+}
+.nav__header{
+    color: rgb(221, 152, 15);
+    background: #111; 
+    cursor: pointer;
+       }

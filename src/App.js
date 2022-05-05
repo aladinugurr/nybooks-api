@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './Components/Navbar/Navbar'
+import Banner from './Components/Banner/Banner'
+import Books from './Components/Books/Books'
+import Footer from './Components/Footer/Footer';
+import { useEffect,useState } from 'react';
+import axios from 'axios'
 function App() {
+
+ const KEY = "h04zshZ3BMywNNFXVkZAeI4jCqGkwr47";
+ const [books,setBooks] = useState([]);
+
+const  fetchData = async() => {
+  
+   const res =
+    await axios.get(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${KEY}`);
+    const data = res.data.results.books;
+   
+    setBooks(data);
+ };
+ useEffect(()=>{
+  fetchData()
+ 
+ },[])
+ console.log(books)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <Navbar />
+     <Banner />
+     <Books books={books}/>
+     <Footer />
+     </div>
   );
 }
 

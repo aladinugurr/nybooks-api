@@ -1,0 +1,13 @@
+.books{
+display: flex;
+grid-template-columns: auto auto auto;
+padding: 20px;
+/* background: rgb(235, 188, 0); */
+background: #111;
+justify-content: space-between;
+flex-wrap: wrap;
+
+}
+
+
+

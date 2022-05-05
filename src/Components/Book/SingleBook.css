@@ -1,0 +1,35 @@
+.book{
+    background: rgb(255, 255, 255);
+    padding: 10px;    
+    align-items: center;
+   max-width: 300px;
+    margin: 20px;
+    color: #111;
+   border-radius: 5px ;
+    }
+
+.book:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.book__image{
+    max-width: 300px;
+    min-width: 100px;
+}
+
+.description{
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.title > p{
+    font-weight: 700;
+    padding-right: 10px;
+}
