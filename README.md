@@ -1,4 +1,4 @@
-<h2>Live Demo: </h2> <a href="booksapi-aladinugurr.netlify.app">Click Here</a>
+<a href="booksapi-aladinugurr.netlify.app">Click Here</a>
 
 # Getting Started with Create React App
 
